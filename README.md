@@ -6,6 +6,14 @@
 ## 使用方法：
 
 ```go
+import (
+	"fmt"
+	"os"
+
+	"github.com/chekun/baidu-yuyin/asr"
+	"github.com/chekun/baidu-yuyin/oauth"
+)
+
 clientID := "your-client-id"
 clientSecret := "your-client-secret"
 
