@@ -24,6 +24,9 @@ clientID := "your-client-id"
 clientSecret := "your-client-secret"
 
 auth := oauth.New(clientID, clientSecret, oauth.NewMemoryCacheMan())
+//一次性使用也可以不缓存token, 如下
+//auth := oauth.New(clientID, clientSecret, nil)
+//也可以实现自己的缓存，往下看⬇️ ️ ️
 token, err := auth.GetToken()
 if err != nil {
     panic(err)
