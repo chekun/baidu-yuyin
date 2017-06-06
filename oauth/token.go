@@ -4,7 +4,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"fmt"
 	"io/ioutil"
 	"net/http"
 	"net/url"
@@ -43,7 +42,7 @@ func (oauth *Oauth) GetToken() (string, error) {
 	params.Add("grant_type", grantType)
 	params.Add("client_id", oauth.clientID)
 	params.Add("client_secret", oauth.clientSecret)
-	fmt.Println(params)
+
 	resp, err := http.PostForm(baiduTokenURL, params)
 	if err != nil {
 		return "", err
